@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Cards - Save Your Moments</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Cards</h1>
+            <p>Create and save your precious moments</p>
+        </header>
+
+        <div class="controls">
+            <button id="add-card" class="btn">
+                <i class="fas fa-plus"></i> Add New Memory
+            </button>
+        </div>
+
+        <div class="cards-container" id="cards-container">
+            <!-- Cards will be added here dynamically -->
+        </div>
+    </div>
+
+    <!-- Add Card Modal -->
+    <div class="modal" id="add-card-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Memory Card</h2>
+            <form id="card-form">
+                <div class="form-group">
+                    <label for="card-title">Title:</label>
+                    <input type="text" id="card-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-date">Date:</label>
+                    <input type="date" id="card-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="card-description">Memory Description:</label>
+                    <textarea id="card-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="card-image">Upload Image:</label>
+                    <input type="file" id="card-image" accept="image/*">
+                </div>
+                <button type="submit" class="btn">Save Memory</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
